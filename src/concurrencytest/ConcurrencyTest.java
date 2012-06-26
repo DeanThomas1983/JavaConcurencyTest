@@ -4,8 +4,7 @@
  */
 package concurrencytest;
 
-/**
- *
+/*
  * @author dean
  */
 public class ConcurrencyTest {
@@ -15,5 +14,6 @@ public class ConcurrencyTest {
      */
     public static void main(String[] args) {
         // TODO code application logic here
+        
     }
 }
