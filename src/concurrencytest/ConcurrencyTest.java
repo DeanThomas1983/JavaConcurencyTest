@@ -15,5 +15,17 @@ public class ConcurrencyTest {
     public static void main(String[] args) {
         // TODO code application logic here
         
+        Thread upThread = new Thread(new UpCounter());
+        Thread downThread = new Thread(new DownCounter());
+        
+        upThread.start();
+        downThread.start();
+        
+        while(upThread.isAlive() || downThread.isAlive())
+        {
+            
+        }
+        
+        System.out.println("Execution finished");
     }
 }

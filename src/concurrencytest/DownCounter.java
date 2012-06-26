@@ -9,11 +9,26 @@ package concurrencytest;
  * @author dean
  */
 public class DownCounter implements Runnable {
+    int i;
     
     @Override
     public void run()
     {
         System.out.println("DownCounter thread started");
+        
+        i = 50;
+        
+        work();
+    }
+    
+    private void work()
+    {
+        while (i > 0)
+        {
+            i--;
+            
+            System.out.println("DownThread: " + i);
+        }
     }
     
     public static void main(String args[])
