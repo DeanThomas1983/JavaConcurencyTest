@@ -8,7 +8,7 @@ package concurrencytest;
  *
  * @author dean
  */
-public class DownCounter extends Thread {
+public class DownCounter implements Runnable {
     
     @Override
     public void run()
@@ -18,6 +18,6 @@ public class DownCounter extends Thread {
     
     public static void main(String args[])
     {
-        (new DownCounter()).start();
+        (new Thread(new DownCounter())).start();
     }
 }
